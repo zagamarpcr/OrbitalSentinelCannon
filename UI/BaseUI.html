@@ -10,17 +10,22 @@
 			height: 100vh; /* Set body height to full viewport height */
 			background-color: #000; /* Set background color to black */
 		}
+		.outer-box {
+			width: 100%; /* Set outer box width to full viewport width */
+			height: 100vh; /* Set outer box height to full viewport height */
+			border: 1px solid #333; /* Add a dark grey border */
+			border-radius: 10px; /* Add rounded corners to the outer box */
+			padding: 20px; /* Add padding to the outer box */
+			box-sizing: border-box; /* Include padding in the width and height */
+		}
 		.container {
-			width: 100%; /* Set container width to full viewport width */
-			margin: 0; /* Remove default margin */
-			padding: 0; /* Remove default padding */
-			height: 100vh; /* Set container height to full viewport height */
 			display: flex; /* Use flexbox to align image and content */
+			height: 100%; /* Set container height to full parent height */
 		}
 		.image-container {
 			width: 220px; /* Set image container width */
 			height: 100%; /* Set image container height to full parent height */
-			border-radius: 10px; /* Add rounded corners to the image container */
+			border-radius: 10px 0 0 10px; /* Add rounded corners to the image container */
 			overflow: hidden; /* Hide any overflow from the image */
 		}
 		.image-container img {
@@ -28,22 +33,30 @@
 			height: 100%; /* Set image height to full parent height */
 			object-fit: cover; /* Scale the image to cover the entire container */
 		}
-		.content {
+		.inner-box {
 			flex: 1; /* Take up the remaining space */
-			padding: 20px;
-			color: #fff; /* Set text color to white */
+			background-color: #333; /* Set inner box background color to dark grey */
+			padding: 20px; /* Add padding to the inner box */
+			border-radius: 0 10px 10px 0; /* Add rounded corners to the inner box */
+		}
+		.inner-box-inner {
+			background-color: #444; /* Set inner box inner background color to darker grey */
+			padding: 20px; /* Add padding to the inner box inner */
+			border-radius: 10px; /* Add rounded corners to the inner box inner */
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="image-container">
-			<img src="images/OSC.jpeg" alt="OSC Image">
-		</div>
-		<div class="content">
-			<h1>LOIC-inspired UI</h1>
-			<p>This is a basic UI similar to LOIC with an image on the far left.</p>
-			<!-- Add your UI elements here, such as buttons, text inputs, etc. -->
+	<div class="outer-box">
+		<div class="container">
+			<div class="image-container">
+				<img src="images/OSC.jpeg" alt="OSC Image">
+			</div>
+			<div class="inner-box">
+				<div class="inner-box-inner">
+					<!-- Add your UI elements here, such as buttons, text inputs, etc. -->
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
