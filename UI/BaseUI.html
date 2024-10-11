@@ -1,37 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Base UI</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base UI</title>
+    <link rel="stylesheet" href="baseui.css">
 </head>
 <body>
-	<div class="container">
-		<div class="top-bar">
-			<button class="target-lock-btn" onclick="lockTarget()">TARGET LOCK</button>
-			<input type="text" id="target-input" placeholder="Target Info">
-		</div>
-		<div class="left-side">
-			<img src="images/OSC.jpeg" alt="OSC Background Image" class="left-image">
-		</div>
-		<div class="right-side">
-			<select class="dropdown">
-				<option value="">Select Option</option>
-				<option value="option1">Option 1</option>
-				<option value="option2">Option 2</option>
-				<!-- Add more options here -->
-			</select>
-			<div class="target-info-panel">
-				<p id="target-info"></p>
-			</div>
-		</div>
-		<button class="initiate-btn">INITIATE</button>
-	</div>
-
-	<script>
-		function lockTarget() {
-			var targetInput = document.getElementById("target-input").value;
-			document.getElementById("target-info").innerHTML = targetInput;
-		}
-	</script>
+    <div class="container clearfix">
+        <div class="top-bar">
+            <button class="target-lock-btn">Target Lock</button>
+            <input type="text" class="target-input" placeholder="Enter target URL">
+        </div>
+        <div class="left-side">
+            <img src="https://via.placeholder.com/300" alt="Left Image" class="left-image">
+        </div>
+        <div class="right-side">
+            <select class="dropdown">
+                <option value="">Select an option</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+            <div class="target-info-panel">
+                <p>Target Information</p>
+            </div>
+            <button class="initiate-btn">Initiate</button>
+        </div>
+    </div>
 </body>
 </html>
