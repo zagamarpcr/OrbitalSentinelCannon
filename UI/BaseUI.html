@@ -44,6 +44,31 @@
 			padding: 20px; /* Add padding to the inner box inner */
 			border-radius: 10px; /* Add rounded corners to the inner box inner */
 		}
+		.textbox-container {
+			background-color: #555; /* Set textbox container background color to dark grey */
+			padding: 10px; /* Add padding to the textbox container */
+			border-radius: 10px; /* Add rounded corners to the textbox container */
+		}
+		.textbox {
+			width: 100%; /* Set textbox width to full parent width */
+			padding: 10px; /* Add padding to the textbox */
+			font-size: 16px; /* Set textbox font size */
+			border: none; /* Remove default border */
+			border-radius: 10px; /* Add rounded corners to the textbox */
+		}
+		.button {
+			background-color: #666; /* Set button background color to dark grey */
+			color: #fff; /* Set button text color to white */
+			padding: 10px 20px; /* Add padding to the button */
+			border: none; /* Remove default border */
+			border-radius: 10px; /* Add rounded corners to the button */
+			cursor: pointer; /* Change cursor to pointer on hover */
+		}
+		.display-text {
+			font-size: 24px; /* Set display text font size */
+			font-weight: bold; /* Set display text font weight to bold */
+			color: #fff; /* Set display text color to white */
+		}
 	</style>
 </head>
 <body>
@@ -54,10 +79,24 @@
 			</div>
 			<div class="inner-box">
 				<div class="inner-box-inner">
-					<!-- Add your UI elements here, such as buttons, text inputs, etc. -->
+					<div class="textbox-container">
+						<input type="text" id="textbox" class="textbox" placeholder="Enter text here">
+					</div>
+					<button class="button" id="target-button">Target</button>
+					<div class="display-text" id="display-text"></div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		const textbox = document.getElementById('textbox');
+		const targetButton = document.getElementById('target-button');
+		const displayText = document.getElementById('display-text');
+
+		targetButton.addEventListener('click', () => {
+			displayText.innerText = textbox.value;
+		});
+	</script>
 </body>
 </html>
