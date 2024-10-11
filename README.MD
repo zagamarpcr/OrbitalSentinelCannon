@@ -44,3 +44,34 @@ Resource Exhaustion: This attack involves repeatedly requesting access to a reso
 DNS amplification attacks: exploiting DNS servers to amplify traffic
 
 NTP amplification attacks: exploiting NTP servers to amplify traffic
+
+## What i have planned for OSC
+
+I have planned that i can make every single one of these a example inside my domain.
+
+
+
+
+# DISCLAIMER:
+
+****DISCLAIMER****
+
+The Orbital Sentinel Cannon (OSC) is a test DDoS tool designed for educational and research purposes only. I, Comet, the creator of OSC, do not condone or encourage the use of this tool for malicious or illegal activities, including launching DDoS attacks against websites, networks, or individuals.
+
+****USE AT YOUR OWN RISK****
+
+By using OSC, you acknowledge that you understand the risks and consequences of using this tool. You agree to use OSC solely for legitimate purposes, such as testing your own network's resilience or demonstrating the impact of DDoS attacks in a controlled environment.
+
+****I AM NOT RESPONSIBLE FOR ANY DAMAGE DONE WITH THIS TOOL****
+
+I, Comet, shall not be held liable for any damages, losses, or consequences resulting from the use of OSC. This includes, but is not limited to, damage to networks, systems, or data, as well as any legal or financial consequences arising from the misuse of OSC.
+
+****COMPLIANCE WITH LAWS AND REGULATIONS****
+
+You agree to use OSC in compliance with all applicable laws and regulations, including those related to cybersecurity, data protection, and intellectual property.
+
+****NO WARRANTY****
+
+OSC is provided "as is," without warranty of any kind, express or implied. I, Comet, disclaim any warranties, including but not limited to, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+
+****By using OSC, you acknowledge that you have read, understood, and agreed to the terms of this disclaimer.****
