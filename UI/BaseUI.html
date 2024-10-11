@@ -43,11 +43,16 @@
 			background-color: #444; /* Set inner box inner background color to darker grey */
 			padding: 20px; /* Add padding to the inner box inner */
 			border-radius: 10px; /* Add rounded corners to the inner box inner */
+			display: flex; /* Use flexbox to align textbox and button */
+			justify-content: center; /* Center the textbox and button horizontally */
+			align-items: center; /* Center the textbox and button vertically */
 		}
 		.textbox-container {
 			background-color: #555; /* Set textbox container background color to dark grey */
 			padding: 10px; /* Add padding to the textbox container */
 			border-radius: 10px; /* Add rounded corners to the textbox container */
+			margin-right: 10px; /* Add margin to the right of the textbox container */
+			flex: 1; /* Take up the remaining space */
 		}
 		.textbox {
 			width: 100%; /* Set textbox width to full parent width */
@@ -55,6 +60,7 @@
 			font-size: 16px; /* Set textbox font size */
 			border: none; /* Remove default border */
 			border-radius: 10px; /* Add rounded corners to the textbox */
+			height: 40px; /* Set textbox height to match the button height */
 		}
 		.button {
 			background-color: #666; /* Set button background color to dark grey */
@@ -63,11 +69,13 @@
 			border: none; /* Remove default border */
 			border-radius: 10px; /* Add rounded corners to the button */
 			cursor: pointer; /* Change cursor to pointer on hover */
+			height: 40px; /* Set button height */
 		}
 		.display-text {
 			font-size: 24px; /* Set display text font size */
 			font-weight: bold; /* Set display text font weight to bold */
 			color: #fff; /* Set display text color to white */
+			margin-top: 20px; /* Add margin to the top of the display text */
 		}
 	</style>
 </head>
@@ -80,10 +88,10 @@
 			<div class="inner-box">
 				<div class="inner-box-inner">
 					<div class="textbox-container">
-						<input type="text" id="textbox" class="textbox" placeholder="Enter text here">
+						<input type="text" id=" textbox" class="textbox" placeholder="Enter text here">
 					</div>
-					<button class="button" id="target-button">Target</button>
-					<div class="display-text" id="display-text"></div>
+					 <button class="button" id="target-button">Target</button>
+						<div class="display-text" id="display-text"></div>
 				</div>
 			</div>
 		</div>
