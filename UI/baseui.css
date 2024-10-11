@@ -1,122 +1,57 @@
-/* Global Styles */
+body {
+	background-color: #000; /* Set background color to black */
+}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  /* Container Styles */
-  
-  .container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Top Bar Styles */
-  
-  .top-bar {
-    background-color: #fff;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .target-lock-btn {
-    background-color: #fff;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .target-lock-btn:hover {
-    background-color: #ddd;
-  }
-  
-  .target-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  /* Left Side Styles */
-  
-  .left-side {
-    width: 40%;
-    padding: 20px;
-    float: left;
-  }
-  
-  .left-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0 auto;
-    border-radius: 10px;
-  }
-  
-  /* Right Side Styles */
-  
-  .right-side {
-    width: 60%;
-    padding: 20px;
-    float: right;
-  }
-  
-  .dropdown {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .target-info-panel {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .initiate-btn {
-    background-color: #fff;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .initiate-btn:hover {
-    background-color: #ddd;
-  }
-  
-  /* Clear Floats */
-  
-  .clearfix:before,
-  .clearfix:after {
-    content: "";
-    display: table;
-  }
-  
-  .clearfix:after {
-    clear: both;
-  }
-  
-  .clearfix {
-    clear: both;
-  }
+.container {
+	width: 100%; /* Take full width */
+	height: 100vh; /* Take full height */
+	display: flex; /* Use flexbox to align elements */
+	flex-direction: row; /* Align elements horizontally */
+}
+
+.top-bar {
+	background-color: #333; /* Set top bar background color */
+	padding: 10px; /* Add some padding */
+}
+
+.target-lock-btn {
+	margin-right: 10px; /* Add some space between button and input */
+}
+
+.left-side {
+	width: 30%; /* Set width of left side */
+	height: 100vh; /* Take full height */
+	display: flex; /* Use flexbox to align elements */
+	align-items: center; /* Vertically center elements */
+	justify-content: center; /* Horizontally center elements */
+}
+
+.left-image {
+	height: 100%; /* Take full height */
+	border: none; /* Remove border */
+	margin: 0; /* Remove margin */
+	padding: 0; /* Remove padding */
+	object-fit: cover; /* Scale image to cover the height */
+	object-position: right; /* Align image to the right */
+}
+
+.right-side {
+	width: 70%; /* Set width of right side */
+	height: 100vh; /* Take full height */
+	display: flex; /* Use flexbox to align elements */
+	flex-direction: column; /* Align elements vertically */
+	align-items: center; /* Vertically center elements */
+	padding: 20px; /* Add some padding */
+}
+
+.dropdown {
+	margin-bottom: 20px; /* Add some space between dropdown and target info panel */
+}
+
+.target-info-panel {
+	margin-bottom: 20px; /* Add some space between target info panel and initiate button */
+}
+
+.initiate-btn {
+	width: 100%; /* Take full width */
+}
