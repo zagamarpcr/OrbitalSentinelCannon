@@ -89,4 +89,23 @@
 			<div class="inner-box">
 				<div class="inner-box-inner">
 					<div class="input-button-container">
-						<input type="text" id="textbox" class="textbox" placeholder
+						<input type="text" id="textbox" class="textbox" placeholder ="Enter text here">
+						<button class="button" id="target-button">Target</button>
+					</div>
+					<div class="display-text" id="display-text"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const textbox = document.getElementById('textbox');
+		const targetButton = document.getElementById('target-button');
+		const displayText = document.getElementById('display-text');
+
+		targetButton.addEventListener('click', () => {
+			displayText.innerText = textbox.value;
+		});
+	</script>
+</body>
+</html>
