@@ -21,9 +21,9 @@ body {
 
 .button {
 	position: absolute;
-	bottom: 50px; /* moved up 30px */
-	left: 70%; /* moved more to the right */
-	transform: translateX(0); /* removed horizontal centering */
+	bottom: 150px; /* moved up 100px */
+	left: 70%;
+	transform: translateX(0);
 	background-color: #fff;
 	color: #333;
 	border: none;
