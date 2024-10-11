@@ -47,12 +47,12 @@
 			justify-content: center; /* Center the textbox and button horizontally */
 			align-items: center; /* Center the textbox and button vertically */
 		}
-		.textbox-container {
-			background-color: #555; /* Set textbox container background color to dark grey */
-			padding: 10px; /* Add padding to the textbox container */
-			border-radius: 10px; /* Add rounded corners to the textbox container */
-			margin-right: 10px; /* Add margin to the right of the textbox container */
-			flex: 1; /* Take up the remaining space */
+		.input-button-container {
+			background-color: #555; /* Set input button container background color to dark grey */
+			padding: 10px; /* Add padding to the input button container */
+			border-radius: 10px; /* Add rounded corners to the input button container */
+			display: flex; /* Use flexbox to align textbox and button */
+			align-items: center; /* Center the textbox and button vertically */
 		}
 		.textbox {
 			width: 100%; /* Set textbox width to full parent width */
@@ -61,6 +61,7 @@
 			border: none; /* Remove default border */
 			border-radius: 10px; /* Add rounded corners to the textbox */
 			height: 40px; /* Set textbox height to match the button height */
+			margin-right: 10px; /* Add margin to the right of the textbox */
 		}
 		.button {
 			background-color: #666; /* Set button background color to dark grey */
@@ -87,24 +88,5 @@
 			</div>
 			<div class="inner-box">
 				<div class="inner-box-inner">
-					<div class="textbox-container">
-						<input type="text" id=" textbox" class="textbox" placeholder="Enter text here">
-					</div>
-					 <button class="button" id="target-button">Target</button>
-						<div class="display-text" id="display-text"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script>
-		const textbox = document.getElementById('textbox');
-		const targetButton = document.getElementById('target-button');
-		const displayText = document.getElementById('display-text');
-
-		targetButton.addEventListener('click', () => {
-			displayText.innerText = textbox.value;
-		});
-	</script>
-</body>
-</html>
+					<div class="input-button-container">
+						<input type="text" id="textbox" class="textbox" placeholder
