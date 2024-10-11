@@ -10,28 +10,25 @@
 			height: 100vh; /* Set body height to full viewport height */
 		}
 		.container {
-			width: 80%;
-			margin: 0 auto; /* Center the container */
-			padding: 20px;
-			background-color: #f0f0f0;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			height: 100%; /* Set container height to full parent height */
+			width: 100%; /* Set container width to full viewport width */
+			margin: 0; /* Remove default margin */
+			padding: 0; /* Remove default padding */
+			height: 100vh; /* Set container height to full viewport height */
 		}
 		.image-container {
 			float: left;
-			margin-right: 20px;
+			width: 64px; /* Set image container width */
 			height: 100%; /* Set image container height to full parent height */
 		}
 		.image-container img {
-			width: 64px;
+			width: 100%; /* Set image width to full parent width */
 			height: 100%; /* Set image height to full parent height */
-			border-radius: 10px;
+			border-radius: 10px 0 0 10px; /* Add rounded corners to the left side */
 			object-fit: cover; /* Scale the image to cover the entire container */
 		}
 		.content {
-			margin-left: 84px;
+			margin-left: 64px; /* Add margin to the content area */
+			padding: 20px;
 		}
 	</style>
 </head>
