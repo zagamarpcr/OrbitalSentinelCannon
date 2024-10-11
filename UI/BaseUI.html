@@ -3,94 +3,80 @@
 <head>
 	<title>LOIC-inspired UI</title>
 	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0; /* Remove default margin */
+			padding: 0; /* Remove default padding */
+			height: 100vh; /* Set body height to full viewport height */
+			background-color: #000; /* Set background color to black */
+		}
 		.outer-box {
-			width: 100%;
-			height: 100vh;
-			border: 1px solid #333;
-			border-radius: 10px;
-			padding: 20px;
-			box-sizing: border-box;
+			width: 100%; /* Set outer box width to full viewport width */
+			height: 100vh; /* Set outer box height to full viewport height */
+			border: 1px solid #333; /* Add a dark grey border */
+			border-radius: 10px; /* Add rounded corners to the outer box */
+			padding: 20px; /* Add padding to the outer box */
+			box-sizing: border-box; /* Include padding in the width and height */
 		}
-
 		.container {
-			display: flex;
-			height: 100%;
+			display: flex; /* Use flexbox to align image and content */
+			height: 100%; /* Set container height to full parent height */
 		}
-
+		.image-container {
+			width: 220px; /* Set image container width */
+			height: 100%; /* Set image container height to full parent height */
+			border-radius: 10px 0 0 10px; /* Add rounded corners to the image container */
+			overflow: hidden; /* Hide any overflow from the image */
+		}
+		.image-container img {
+			width: 100%; /* Set image width to full parent width */
+			height: 100%; /* Set image height to full parent height */
+			object-fit: cover; /* Scale the image to cover the entire container */
+		}
 		.inner-box {
-			flex: 1;
-			background-color: #333;
-			padding: 20px;
-			border-radius: 0 10px 10px 0;
+			flex: 1; /* Take up the remaining space */
+			background-color: #333; /* Set inner box background color to dark grey */
+			padding: 20px; /* Add padding to the inner box */
+			border-radius: 0 10px 10px 0; /* Add rounded corners to the inner box */
 		}
-
 		.inner-box-inner {
-			background-color: #444;
-			padding: 20px;
-			border-radius: 10px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			background-color: #444; /* Set inner box inner background color to darker grey */
+			padding: 20px; /* Add padding to the inner box inner */
+			border-radius: 10px; /* Add rounded corners to the inner box inner */
+			display: flex; /* Use flexbox to align textbox and button */
+			justify-content: center; /* Center the textbox and button horizontally */
+			align-items: center; /* Center the textbox and button vertically */
 		}
-
 		.input-button-container {
-			background-color: #555;
-			padding: 10px;
-			border-radius: 10px;
-			display: flex;
-			align-items: center;
+			background-color: #555; /* Set input button container background color to dark grey */
+			padding: 10px; /* Add padding to the input button container */
+			border-radius: 10px; /* Add rounded corners to the input button container */
+			display: flex; /* Use flexbox to align textbox and button */
+			align-items: center; /* Center the textbox and button vertically */
 		}
-
 		.textbox {
-			width: 100%;
-			padding: 10px;
-			font-size: 16px;
-			border: none;
-			border-radius: 10px;
-			height: 40px;
-			margin-right: 10px;
+			width: 100%; /* Set textbox width to full parent width */
+			padding: 10px; /* Add padding to the textbox */
+			font-size: 16px; /* Set textbox font size */
+			border: none; /* Remove default border */
+			border-radius: 10px; /* Add rounded corners to the textbox */
+			height: 40px; /* Set textbox height to match the button height */
+			margin-right: 10px; /* Add margin to the right of the textbox */
 		}
-
 		.button {
-			background-color: #666;
-			color: #fff;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
-			height: 40px;
+			background-color: #666; /* Set button background color to dark grey */
+			color: #fff; /* Set button text color to white */
+			padding: 10px 20px; /* Add padding to the button */
+			border: none; /* Remove default border */
+			border-radius: 10px; /* Add rounded corners to the button */
+			cursor: pointer; /* Change cursor to pointer on hover */
+			height: 40px; /* Set button height */
 		}
-
-		.target-info-box {
-			background-color: #666;
-			padding: 20px;
-			border-radius: 10px;
-			margin-top: 20px;
-		}
-
-		#target-info-header {
-			color: #fff;
-			margin-bottom: 10px;
-		}
-
-		#target-info-content {
-			color: #fff;
-		}
-
-		.overload-status-box {
-			background-color: #666;
-			padding: 20px;
-			border-radius: 10px;
-			margin-top: 20px;
-		}
-
-		#overload-status-header {
-			color: #fff;
-			margin-bottom: 10px;
-		}
-
-		#overload-status-content {
-			color: #fff;
+		.display-text {
+			font-size: 24px; /* Set display text font size */
+			font-weight: bold; /* Set display text font weight to bold */
+			color: #fff; /* Set display text color to white */
+			margin-top: 20px; /* Add margin to the top of the display text */
 		}
 	</style>
 </head>
@@ -103,40 +89,23 @@
 			<div class="inner-box">
 				<div class="inner-box-inner">
 					<div class="input-button-container">
-						<input type="text" id="ip-input" class="textbox" placeholder="Enter IP address">
-						<button class="button" id="target-button">Get IP Info</button>
+						<input type="text" id="textbox" class="textbox" placeholder ="Enter text here">
+						<button class="button" id="target-button">Target</button>
 					</div>
-					<div class="target-info-box">
-						<h2 id="target-info-header">TARGET INFO:</h2>
-						<div id="target-info-content"></div>
-						<div class="overload-status-box">
-							<h2 id="overload-status-header">OVERLOAD STATUS:</h2>
-							<div id="overload-status-content"></div>
-						</div>
-					</div>
+					<div class="display-text" id="display-text"></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<script>
-		const ipInput = document.getElementById('ip-input');
+		const textbox = document.getElementById('textbox');
 		const targetButton = document.getElementById('target-button');
-		const targetInfoHeader = document.getElementById('target-info-header');
-		const targetInfoContent = document.getElementById('target-info-content');
-		const overloadStatusHeader = document.getElementById('overload-status-header');
-		const overloadStatusContent = document.getElementById('overload-status-content');
+		const displayText = document.getElementById('display-text');
 
 		targetButton.addEventListener('click', () => {
-			const ipAddress = ipInput.value;
-			targetInfoContent.innerText = `IP Address: ${ipAddress}`;
-
-			checkOverloadStatus(ipAddress);
+			displayText.innerText = textbox.value;
 		});
-
-		function checkOverloadStatus(ipAddress) {
-			overloadStatusContent.innerText = `Overload Status: ${ipAddress} is not overloaded`;
-		}
 	</script>
 </body>
 </html>
