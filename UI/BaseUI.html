@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LOIC-inspired UI</title>
+	<title>OSC</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -78,6 +78,30 @@
 			color: #fff; /* Set display text color to white */
 			margin-top: 20px; /* Add margin to the top of the display text */
 		}
+		.dropdown-container {
+			background-color: #555; /* Set dropdown container background color to dark grey */
+			padding: 10px; /* Add padding to the dropdown container */
+			border-radius: 10px; /* Add rounded corners to the dropdown container */
+			display: flex; /* Use flexbox to align dropdown and button */
+			align-items: center; /* Center the dropdown and button vertically */
+		}
+		.dropdown {
+			background-color: #666; /* Set dropdown background color to dark grey */
+			color: #fff; /* Set dropdown text color to white */
+			padding: 10px; /* Add padding to the dropdown */
+			border: none; /* Remove default border */
+			border-radius: 10px; /* Add rounded corners to the dropdown */
+			cursor: pointer; /* Change cursor to pointer on hover */
+		}
+		.start-button {
+			background-color: #666; /* Set start button background color to dark grey */
+			color: #fff; /* Set start button text color to white */
+			padding: 10px 20px; /* Add padding to the start button */
+			border: none; /* Remove default border */
+			border-radius: 10px; /* Add rounded corners to the start button */
+			cursor: pointer; /* Change cursor to pointer on hover */
+			margin: 0 auto; /* Center the start button horizontally */
+		}
 	</style>
 </head>
 <body>
@@ -96,10 +120,19 @@
 				</div>
 			</div>
 		</div>
+		<div class="dropdown-container">
+			<select class="dropdown">
+				<option value="">Select an option</option>
+				<option value="option1">Option 1</option>
+				<option value="option2">Option 2</option>
+				<option value="option3">Option 3</option>
+			</select>
+		</div>
+		<button class="start-button">Start</button>
 	</div>
 
 	<script>
-		const textbox = document.getElementById('textbox');
+		const textbox = document.getElementById(' textbox');
 		const targetButton = document.getElementById('target-button');
 		const displayText = document.getElementById('display-text');
 
