@@ -44,9 +44,8 @@
 			padding: 20px; /* Add padding to the inner box inner */
 			border-radius: 10px; /* Add rounded corners to the inner box inner */
 			display: flex; /* Use flexbox to align textbox and button */
-			justify-content: center; /* Center the textbox and button horizontally */
-			align-items: center; /* Center the textbox and button vertically */
 			flex-direction: column; /* Stack elements vertically */
+			align-items: center; /* Center the textbox and button horizontally */
 		}
 		.input-button-container {
 			background-color: #555; /* Set input button container background color to dark grey */
@@ -85,8 +84,9 @@
 			padding: 10px; /* Add padding to the dropdown container */
 			border-radius: 10px; /* Add rounded corners to the dropdown container */
 			display: flex; /* Use flexbox to align dropdown and button */
-			align-items: center; /* Center the dropdown and button vertically */
+ align-items: center; /* Center the dropdown and button vertically */
 			justify-content: center; /* Center the dropdown and button horizontally */
+			margin-top: 20px; /* Add margin to the top of the dropdown container */
 		}
 		.dropdown {
 			background-color: #666; /* Set dropdown background color to dark grey */
@@ -120,17 +120,17 @@
 						<button class="button" id="target-button">Target</button>
 					</div>
 					<div class="display-text" id="display-text"></div>
+					<div class="dropdown-container">
+						<select class="dropdown">
+							<option value="">Select an option</option>
+							<option value="option1">Option 1</option>
+							<option value="option2">Option 2</option>
+							<option value="option3">Option 3</option>
+						</select>
+						<button class="start-button">Start</button>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="dropdown-container">
-			<select class="dropdown">
-				<option value="">Select an option</option>
-				<option value="option1">Option 1</option>
-				<option value="option2">Option 2</option>
-				<option value="option3">Option 3</option>
-			</select>
-			<button class="start-button">Start</button>
 		</div>
 	</div>
 
