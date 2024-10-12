@@ -46,6 +46,7 @@
 			display: flex; /* Use flexbox to align textbox and button */
 			justify-content: center; /* Center the textbox and button horizontally */
 			align-items: center; /* Center the textbox and button vertically */
+			flex-direction: column; /* Stack elements vertically */
 		}
 		.input-button-container {
 			background-color: #555; /* Set input button container background color to dark grey */
@@ -53,6 +54,7 @@
 			border-radius: 10px; /* Add rounded corners to the input button container */
 			display: flex; /* Use flexbox to align textbox and button */
 			align-items: center; /* Center the textbox and button vertically */
+			width: 100%; /* Make it full width */
 		}
 		.textbox {
 			width: 100%; /* Set textbox width to full parent width */
@@ -84,6 +86,7 @@
 			border-radius: 10px; /* Add rounded corners to the dropdown container */
 			display: flex; /* Use flexbox to align dropdown and button */
 			align-items: center; /* Center the dropdown and button vertically */
+			justify-content: center; /* Center the dropdown and button horizontally */
 		}
 		.dropdown {
 			background-color: #666; /* Set dropdown background color to dark grey */
@@ -127,12 +130,12 @@
 				<option value="option2">Option 2</option>
 				<option value="option3">Option 3</option>
 			</select>
+			<button class="start-button">Start</button>
 		</div>
-		<button class="start-button">Start</button>
 	</div>
 
 	<script>
-		const textbox = document.getElementById(' textbox');
+		const textbox = document.getElementById('textbox');
 		const targetButton = document.getElementById('target-button');
 		const displayText = document.getElementById('display-text');
 
