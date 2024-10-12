@@ -5,107 +5,107 @@
 	<style>
 		body {
 			font-family: Arial, sans-serif;
-			margin: 0; /* Remove default margin */
-			padding: 0; /* Remove default padding */
-			height: 100vh; /* Set body height to full viewport height */
-			background-color: #000; /* Set background color to black */
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			background-color: #000;
 		}
 		.outer-box {
-			width: 100%; /* Set outer box width to full viewport width */
-			height: 100vh; /* Set outer box height to full viewport height */
-			border: 1px solid #333; /* Add a dark grey border */
-			border-radius: 10px; /* Add rounded corners to the outer box */
-			padding: 20px; /* Add padding to the outer box */
-			box-sizing: border-box; /* Include padding in the width and height */
-			display: flex; /* Use flexbox to align content vertically */
-			flex-direction: column; /* Stack elements vertically */
+			width: 100%;
+			height: 100vh;
+			border: 1px solid #333;
+			border-radius: 10px;
+			padding: 20px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
 		}
 		.container {
-			display: flex; /* Use flexbox to align image and content */
-			flex: 1; /* Take up the remaining space */
+			display: flex;
+			flex: 1;
 		}
 		.image-container {
-			width: 220px; /* Set image container width */
-			height: 100%; /* Set image container height to full parent height */
-			border-radius: 10px 0 0 10px; /* Add rounded corners to the image container */
-			overflow: hidden; /* Hide any overflow from the image */
+			width: 220px;
+			height: 100%;
+			border-radius: 10px 0 0 10px;
+			overflow: hidden;
 		}
 		.image-container img {
-			width: 100%; /* Set image width to full parent width */
-			height: 100%; /* Set image height to full parent height */
-			object-fit: cover; /* Scale the image to cover the entire container */
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 		.inner-box {
-			flex: 1; /* Take up the remaining space */
-			background-color: #333; /* Set inner box background color to dark grey */
-			padding: 20px; /* Add padding to the inner box */
-			border-radius: 0 10px 10px 0; /* Add rounded corners to the inner box */
+			flex: 1;
+			background-color: #333;
+			padding: 20px;
+			border-radius: 0 10px 10px 0;
 		}
 		.inner-box-inner {
-			background-color: #444; /* Set inner box inner background color to darker grey */
-			padding: 20px; /* Add padding to the inner box inner */
-			border-radius: 10px; /* Add rounded corners to the inner box inner */
-			display: flex; /* Use flexbox to align textbox and button */
-			flex-direction: column; /* Stack elements vertically */
-			align-items: center; /* Center the textbox and button horizontally */
+			background-color: #444;
+			padding: 20px;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 		.input-button-container {
-			background-color: #555; /* Set input button container background color to dark grey */
-			padding: 10px; /* Add padding to the input button container */
-			border-radius: 10px; /* Add rounded corners to the input button container */
-			display: flex; /* Use flexbox to align textbox and button */
-			align-items: center; /* Center the textbox and button vertically */
-			width: 100%; /* Make it full width */
+			background-color: #555;
+			padding: 10px;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			width: 100%;
 		}
 		.textbox {
-			width: 100%; /* Set textbox width to full parent width */
-			padding: 10px; /* Add padding to the textbox */
-			font-size: 16px; /* Set textbox font size */
-			border: none; /* Remove default border */
-			border-radius: 10px; /* Add rounded corners to the textbox */
-			height: 40px; /* Set textbox height to match the button height */
-			margin-right: 10px; /* Add margin to the right of the textbox */
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			border-radius: 10px;
+			height: 40px;
+			margin-right: 10px;
 		}
 		.button {
-			background-color: #666; /* Set button background color to dark grey */
-			color: #fff; /* Set button text color to white */
-			padding: 10px 20px; /* Add padding to the button */
-			border: none; /* Remove default border */
-			border-radius: 10px; /* Add rounded corners to the button */
-			cursor: pointer; /* Change cursor to pointer on hover */
-			height: 40px; /* Set button height */
+			background-color: #666;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			height: 40px;
 		}
 		.display-text {
-			font-size: 24px; /* Set display text font size */
-			font-weight: bold; /* Set display text font weight to bold */
-			color: #fff; /* Set display text color to white */
-			margin-top: 20px; /* Add margin to the top of the display text */
+			font-size: 24px;
+			font-weight: bold;
+			color: #fff;
+			margin-top: 20px;
 		}
 		.dropdown-container {
-			background-color: #555; /* Set dropdown container background color to dark grey */
-			padding: 10px; /* Add padding to the dropdown container */
-			border-radius: 10px; /* Add rounded corners to the dropdown container */
-			display: flex; /* Use flexbox to align dropdown and button */
-			align-items: center; /* Center the dropdown and button vertically */
-			justify-content: center; /* Center the dropdown and button horizontally */
-			margin-top: 20px; /* Add margin to the top of the dropdown container */
+			background-color: #555;
+			padding: 10px;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
 		}
 		.dropdown {
-			background-color: #666; /* Set dropdown background color to dark grey */
-			color: #fff; /* Set dropdown text color to white */
-			padding: 10px; /* Add padding to the dropdown */
-			border: none; /* Remove default border */
-			border-radius: 10px; /* Add rounded corners to the dropdown */
-			cursor: pointer; /* Change cursor to pointer on hover */
+			background-color: #666;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
 		}
 		.start-button {
-			background-color: #666; /* Set start button background color to dark grey */
-			color: #fff; /* Set start button text color to white */
-			padding: 10px 20px; /* Add padding to the start button */
-			border: none; /* Remove default border */
-			border-radius: 10px; /* Add rounded corners to the start button */
-			cursor: pointer; /* Change cursor to pointer on hover */
-			margin: 20px auto; /* Add margin to the top and bottom of the start button and center it horizontally */
+			background-color: #666;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			margin: 20px auto;
 		}
 	</style>
 </head>
@@ -118,34 +118,42 @@
 			<div class="inner-box">
 				<div class="inner-box-inner">
 					<div class="input-button-container">
-						<input type="text" id="textbox" class="textbox" placeholder ="Enter text here">
-						<button class="button" id="target-button">Target</button>
+						<input type="text" id="target-input" class="textbox" placeholder="Enter target domain here">
+						<button class="button" id="set-target-button">Set Target</button>
 					</div>
 					<div class="display-text" id="display-text"></div>
 					<div class="dropdown-container">
-						<select class="dropdown">
-							<option value="">Select an option</option>
-							<option value="ddos-udp">UDP Flood</option>
-							<option value="ddos-tcp">TCP Flood</option>
-							<option value="ddos-http">HTTP Flood</option>
-							<option value="ddos-icmp">ICMP Flood</option>
-							<option value="ddos-pod">Ping Of Death</option>
-							
+						<select class="dropdown" id="attack-dropdown">
+							<option value="">Select an attack</option>
+							<option value="http2">HTTP/2 Rapid Reset</option>
+							<!-- Add more attack options here -->
 						</select>
 					</div>
 				</div>
-				<button class="start-button">Start</button>
+				<button class="start-button" id="start-button">Start</button>
 			</div>
 		</div>
-	</div>
 
+	<script src="attacks/http2.js"></script>
 	<script>
-		const textbox = document.getElementById('textbox');
-		const targetButton = document.getElementById('target-button');
+		const targetInput = document.getElementById('target-input');
+		const setTargetButton = document.getElementById('set-target-button');
 		const displayText = document.getElementById('display-text');
+		const attackDropdown = document.getElementById('attack-dropdown');
+		const startButton = document.getElementById('start-button');
 
-		targetButton.addEventListener('click', () => {
-			displayText.innerText = textbox.value;
+		let targetDomain = '';
+
+		setTargetButton.addEventListener('click', () => {
+			targetDomain = targetInput.value;
+			displayText.innerText = `Target set to: ${targetDomain}`;
+		});
+
+	 startButton.addEventListener('click', () => {
+			if (attackDropdown.value === 'http2') {
+				http2Attack(targetDomain);
+			}
+			// Add more attack options here
 		});
 	</script>
 </body>
